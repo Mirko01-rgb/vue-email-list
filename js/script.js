@@ -13,6 +13,9 @@ function boxGenerator(){
        emails(res);
 
      },
+     error: function() {
+     console.log('error');
+    }
 
     })
   }
