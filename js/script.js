@@ -1,19 +1,31 @@
 
 //GOAL: Attraverso l'apposita API di Boolean generare 10 indirizzi email e stamparli in pagina all'interno di una lista.
+function boxGenerator(){
+  $.ajax({
+   url: 'https://flynn.boolean.careers/exercises/api/random/mail',
+   method: 'GET',
+   success: function(data) {
+     //console.log(data);
+     //console.log(data.response);
+     const res = data.response;
+     //console.log(res);
+     emails(res);
 
-function initVue(){
- new Vue({
-   el: '#app',
-   data : {
+   },
 
-  }
+  })
 
- });
 }
 
-
-function init(){
-  initVue();
+function emails(email) {
+  console.log(email);
 
 }
+
+function init() {
+
+  boxGenerator();
+
+}
+
 document.addEventListener('DOMContentLoaded', init);
