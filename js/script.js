@@ -15,7 +15,7 @@ function boxGenerator(){
      },
      error: function() {
      console.log('error');
-    }
+     }
 
     })
   }
@@ -29,9 +29,14 @@ function emails(email) {
 
 }
 
-function init() {
+function button(){
+const btns = $('#btn');
+ btns.click(boxGenerator);
 
-  boxGenerator();
+}
+
+function init() {
+  button();
 
 }
 
